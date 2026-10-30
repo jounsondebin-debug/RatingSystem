@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap");
+
+:root {
+  --green: #58cc02;
+  --green-dark: #58a700;
+  --blue: #1cb0f6;
+  --blue-dark: #1899d6;
+  --red: #ff4b4b;
+  --red-dark: #ea2b2b;
+  --text: #4b4b4b;
+  --gray: #e5e5e5;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+.App {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.App > p {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin: 0 0 28px;
+}
+
+/* title */
+.App > h1:first-child {
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+
+/* thank-you message */
+.App > h1 {
+  color: var(--green);
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding: 24px;
+  border: 2px solid var(--gray);
+  border-radius: 16px;
+}
+
+/* buttons */
+.App > div {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.App button {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 16px;
+  cursor: pointer;
+  transition: transform 0.05s, box-shadow 0.05s;
+}
+
+.App button:hover {
+  filter: brightness(1.05);
+}
+
+.App button:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent !important;
+}
+
+.App > div button:nth-child(1) { background: var(--green); box-shadow: 0 4px 0 var(--green-dark); }
+.App > div button:nth-child(2) { background: var(--blue);  box-shadow: 0 4px 0 var(--blue-dark); }
+.App > div button:nth-child(3) { background: var(--red);   box-shadow: 0 4px 0 var(--red-dark); }
+
+/* stat rows (last three h1s) */
+.App > h1:nth-last-child(-n + 3) {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-align: left;
+  padding: 14px 18px;
+  margin: 10px 0 0;
+  border: 2px solid var(--gray);
+  border-bottom-width: 4px;
+  border-radius: 16px;
+}
+
+.App > h1:nth-last-child(3) { color: var(--green); }
+.App > h1:nth-last-child(2) { color: var(--blue); }
+.App > h1:nth-last-child(1) { color: var(--red); }
